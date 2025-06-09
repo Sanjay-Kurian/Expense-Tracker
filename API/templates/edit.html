@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head><title>Edit Missing Categories</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Fill in Missing Categories</h2>
+    <div class="container">
+        <div class="main">
+            <form method="POST">
+                <table>
+                    <tr>
+                        {% for col in columns %}
+                            <th>{{ col }}</th>
+                        {% endfor %}
+                        <th>New Category</th>
+                        <th>New Note</th>
+                    </tr>
+                    {% for row in data %}
+                    <tr>
+                        {% for col in columns %}
+                            <td>{{ row[col] }}</td>
+                        {% endfor %}
+                        <td>
+                            <input list="languages" class="category-input" placeholder="Select" name="cat_{{ row['Index'] }}">
+                            <datalist id ="languages">
+                            <option value="Transportation"></option>
+                            <option value="Other"></option>
+                            <option value="Salary"></option>
+                            <option value="Food"></option>
+                            <option value="Tax"></option>
+                            <option value="Household"></option>
+                            <option value="Service charge"></option>
+                            <option value="Rent"></option>
+                            <option value="Culture"></option>
+                            <option value="CIBC Credit Card"></option>
+                            <option value="Phone data"></option>
+                            <option value="Gift"></option>
+                            <option value="Bonus"></option>
+                            <option value="Social Life"></option>
+                            <option value="Personal Care"></option>
+                            <option value="Loan Repayment"></option>
+                            <option value="Health"></option>
+                            <option value="Self-development"></option>
+                            <option value="Apparel"></option>
+                            <option value="Loan"></option>
+                            <option value="Investment"></option>
+                            <option value="Education"></option>
+                            <option value="GIC"></option>
+                            <option value="Petty cash"></option>
+                            <option value="Visa"></option>
+                            </datalist>
+                        </td>
+                        <td>
+                            <input type="text" name="note_{{ row['Index'] }}">
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <br>
+                <input type="submit" value="Submit Updates">
+            </form>
+            <br><br><br>
+            <h3>Add New Reference Note</h3>
+            <form method="POST" action="/add_note">
+            <label>Note:</label><br>
+            <input type="text" name="new_note" required><br>
+            <label>Category:</label><br>
+            <input type="text" name="new_category" required><br><br>
+            <input type="submit" value="Add Note to Reference">
+            </form>
+        </div>
+        <div class="sidebar">
+            <h3>Reference Notes & Categories</h3>
+            <table id="reference-table">
+                <thead>
+                    <tr>
+                        {% for col in ref_columns %}
+                            <th>{{ col }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                {% for row in ref_data %}
+                <tr>
+                    {% for col in ref_columns %}
+                        <td>{{ row[col] }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+<script>
+document.querySelectorAll('.category-input').forEach(input => {
+    input.addEventListener('input', function () {
+        const filterValue = this.value.toLowerCase();
+        const rows = document.querySelectorAll('#reference-table tbody tr');
+
+        rows.forEach(row => {
+            const category = row.querySelector('td:last-child').textContent.toLowerCase();
+            if (!filterValue || category.includes(filterValue)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
