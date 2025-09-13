@@ -32,22 +32,23 @@ An end-to-end **personal finance tracking system** that integrates data from **S
 ---
 
 ## Project Structure
-Expense-Tracker/
-│-- app.py # Flask application
-│-- requirements.txt # Python dependencies
-│-- data/
-│ ├── bank_statements/ # Bank CSV/Excel files
-│ ├── credit_cards/ # Credit card data
-│ └── processed/ # Cleaned/merged data
-│-- notebooks/ # Jupyter notebooks for exploration
-│-- static/ & templates/ # Flask frontend assets
-│-- reports/ # Power BI dashboards/screenshots
-│-- README.md
+Expense-Tracker/  
+│-- app.py # Flask application  
+│-- requirements.txt # Python dependencies  
+│-- data/  
+│ ├── bank_statements/ # Bank CSV/Excel files  
+│ ├── credit_cards/ # Credit card data  
+│ └── processed/ # Cleaned/merged data  
+│-- notebooks/ # Jupyter notebooks for exploration  
+│-- static/ & templates/ # Flask frontend assets  
+│-- reports/ # Power BI dashboards/screenshots  
+│-- README.md  
 
 Power BI Dashboard
 
+![PowerBiDashboard](/Images/PowerBIDashboard.png)
 
-(Attach a screenshot of your dashboard here)
+![PersonalDonutChart](/Images/PersonalFinance.png.png)
 
 Future Improvements
 
@@ -65,7 +66,6 @@ Acknowledgements
 - Power BI
 
 Contact
-
 Sanjay Kurian
-Data Analyst | Aspiring Data Engineer
-LinkedIn | GitHub
+Data Analyst | Aspiring Data Engineer  
+[LinkedIn](https://www.linkedin.com/in/sanjay-kurian/) | [Portfolio](https://sanjay-kurian.github.io/)
