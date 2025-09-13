@@ -44,13 +44,13 @@ Expense-Tracker/
 │-- reports/ # Power BI dashboards/screenshots  
 │-- README.md  
 
-Power BI Dashboard
+## Power BI Dashboard
 
 ![PowerBiDashboard](/Images/PowerBIDashboard.png)
 
-![PersonalDonutChart](/Images/PersonalFinance.png.png)
+![PersonalDonutChart](/Images/PersonalFinance.png)
 
-Future Improvements
+## Future Improvements
 
 Add predictive budgeting using ML models
 
@@ -58,14 +58,14 @@ Automate daily scheduled ingestion with Airflow/Prefect
 
 Deploy Flask app to Heroku/Azure for public access
 
-Acknowledgements
+## Acknowledgements
 
 - Splitwise API
 - Pandas
 - RapidFuzz
 - Power BI
 
-Contact
+## Contact
 Sanjay Kurian
 Data Analyst | Aspiring Data Engineer  
 [LinkedIn](https://www.linkedin.com/in/sanjay-kurian/) | [Portfolio](https://sanjay-kurian.github.io/)
