@@ -31,19 +31,6 @@ An end-to-end **personal finance tracking system** that integrates data from **S
 
 ---
 
-## Project Structure
-Expense-Tracker/  
-│-- app.py # Flask application  
-│-- requirements.txt # Python dependencies  
-│-- data/  
-│ ├── bank_statements/ # Bank CSV/Excel files  
-│ ├── credit_cards/ # Credit card data  
-│ └── processed/ # Cleaned/merged data  
-│-- notebooks/ # Jupyter notebooks for exploration  
-│-- static/ & templates/ # Flask frontend assets  
-│-- reports/ # Power BI dashboards/screenshots  
-│-- README.md  
-
 ## Power BI Dashboard
 
 ![PowerBiDashboard](/Images/PowerBIDashboard.png)
